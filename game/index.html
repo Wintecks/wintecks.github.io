@@ -5,35 +5,53 @@
     <meta charset="UTF-8">
     <title>Wintecks/game</title>
     <link rel="icon" type="image.png" href="/game/game_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <style>
     .center_wrapper {
-        /* 100vh = 100% висоти вікна браузера */
         height: 100vh; 
         
-        /* Увімкнення режиму Flexbox */
         display: flex; 
         
-        /* Горизонтальне центрування */
         justify-content: center; 
         
-        /* Вертикальне центрування */
         align-items: center; 
         
-        /* Видаляємо стандартні відступи body */
         margin: 0; 
+
+        animation-name: slideDown;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
     }
+    
     .content_box {
-        width: 300px;
+        width: 400px;
         padding: 20px;
         color: white;
         text-align: center;
-        border-radius: 8px;
+        border-radius: 16px;
+        background-color: rgb(44, 44, 51);
     }
+
+    @keyframes slideDown {
+    from {
+        transform: translateY(-10%); 
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
 </style> 
 
-<body style="background-color: rgb(39, 39, 47);">
+<body style="background-color: rgb(24, 24, 24);">
     <div class="center_wrapper">
         <div class="content_box">
             <h1>Ваш Ігровий Інтерфейс</h1>
