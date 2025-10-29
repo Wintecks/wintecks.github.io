@@ -1,16 +1,13 @@
-<!DOCTYPE html>
 <html>
-    
+
 <head>
-    <meta charset="UTF-8">
     <title>Wintekcs</title>
-    <link rel="icon" type="image.png" href="/icon.png">
+    <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 </head>
 
 <style>
     body {
-        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
         background-color: rgb(100, 100, 100);
         margin: 0;
     }
@@ -20,7 +17,7 @@
 
     <script>
         let boxes = [];
-        let bsize = 50;
+        let bsize = 60;
         let amx, amy;
         function setup() {
             createCanvas(windowWidth, windowHeight, WEBGL);
@@ -31,27 +28,26 @@
             ortho(-width / 2, width / 2, -height / 2, height / 2, 10, 2000);
             amx = Math.ceil(width / bsize + 1);
             amy = Math.ceil(height / bsize + 1)
-            boxes = new Array(amx * amy).fill(600);
+            boxes = new Array(amx * amy).fill(400);
             fill(110);
         }
 
         function draw() {
-            //orbitControl();
-            background(100);
-            directionalLight(255, 255, 255, -PI * 0.3, PI * 0.1, -PI * 0.6);
-            translate(0, -10, 250);
-            rotateX(-0.2);
-            rotateY(0.2);
+        background(100);
+        directionalLight(255, 255, 255, -PI * 0.3, PI * 0.3, -PI * 0.6);
+        translate(0, -10, 250);
+        rotateX(-0.2);
+        rotateY(0.2);
 
             for (let x = 0; x < width + bsize; x += bsize) {
                 for (let y = 0; y < height + bsize; y += bsize) {
 
-                    let h = noise(frameCount * 0.01, x / width * 10, y / height * 12) * 10 * 25;
+                    let h = noise(frameCount * 0.01, x / width * 10, y / height * 10) * 10 * 25;
 
                     let offs = -35;
                     if (mouseX + offs >= x - bsize / 2 && mouseX + offs <= x + bsize / 2 &&
-                    mouseY + offs >= y - bsize / 2 && mouseY + offs <= y + bsize / 2) {
-                    h = 500;
+                        mouseY + offs >= y - bsize / 2 && mouseY + offs <= y + bsize / 2) {
+                        h = 400;
                     }
                     let idx = Math.round(x / bsize + (width / bsize) * (y / bsize));
                     let k = boxes[idx] < h ? 0.4 : 0.02;
@@ -64,6 +60,6 @@
             }
         }
     </script>
-</body>
 
+</body>
 </html>
