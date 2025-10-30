@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Wintekcs/utils</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
+<style>
+    body {
+        background-color: rgb(31, 31, 31);
+    }
+
+    .cont {
+        width: 260px;
+        height: 60px;
+        color: white;
+        display: flex;
+        border-radius: 6px;
+        background-color: rgb(24, 24, 24);
+        border: 1.5px solid rgb(61, 68, 77);
+        font-family: Verdana;
+        padding: 4px;
+        padding-left: 7px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cont > * {
+        margin: 0;
+    }
+
+    .green_button {
+        height: 60px;
+        width: 60px;
+    }
+
+    .center_wrapper {
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
+    }
+    
+    .flexible_layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px;
+        max-width: 1000px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+</style>
 
 <body>
-    
+    <dev class="center_wrapper">
+        <dev class="flexible_layout">
+            <div class="cont">
+                <h3>Video Download</h3>
+                <button type="button" id="video_dlp" class="green_button"></button>
+            </div>
+        </dev>
+    </dev>
 </body>
 </html>

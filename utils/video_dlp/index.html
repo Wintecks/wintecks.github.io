@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wintekcs/utils/video_dlp</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(31, 31, 31);
+    }
+
+    input {
+        background-color: rgb(49, 49, 49);
+        border: none;
+        color: white;
+        outline: none;
+    }
+
+    .cont {
+        margin-top: 300px;
+        display: flex;
+        background-color: rgb(129, 20, 20);
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="cont">
+        <input 
+            type="url" name="video_url" id="video_url" placeholder="Video URL"
+            style="font-size: 15px; width: 400px;"
+        >
+    </div>
+</body>
+
+<script>
+    const urlInput = document.getElementById('video-url-input');
+    const rawURL = urlInput.value; 
+
+    console.log(typeof rawURL); // "string" (Рядок)
+    console.log(rawURL)
+</script>
+</html>
