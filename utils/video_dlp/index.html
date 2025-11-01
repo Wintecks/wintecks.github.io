@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Wintekcs/utils/video_dlp</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/utils/video_dlp/script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
 </head>
 
 <style>
@@ -15,30 +19,94 @@
         border: none;
         color: white;
         outline: none;
+        padding: 10px;
     }
 
     .cont {
         margin-top: 300px;
         display: flex;
-        background-color: rgb(129, 20, 20);
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
+
+    #result {
+        color: white;
+        width: 450px;
+        background-color: rgba(0, 0, 0, 0.404);
+        margin-top: 8px;
+        font-family: Arial;
+        border-radius: 6px;
+        padding: 7px;
+    }
+
+    .video_header {
+        display: flex;
+        gap: 10px;
+        align-self: flex-start;
+    }
+
+    .video_name {
+        flex-grow: 1;
+    }
+
+    .green_button {
+        height: 40px;
+        width: 40px;
+        background-image: url('/icon/search.png');
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        background-position: center;
+    }
+
+    .slider_cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .noUi-connect {background: #238636;}
+    .noUi-target {
+        background: #464444;
+        border-radius: 3px;
+        height: 8px;
+        border: none;
+    }
+
+    .noUi-handle:before,
+    .noUi-handle:after {
+        display: none;
+    }
+
+    .slider_styled .noUi-handle {
+        height: 12px;
+        width: 12px;
+        top: -2px;
+        right: -9px;
+        border-radius: 4px;
+    }
+
+    #thumbnail {
+        width: 180px;
+        height: auto;
+        display: block;
+    }
+
 </style>
 
 <body>
     <div class="cont">
-        <input 
-            type="url" name="video_url" id="video_url" placeholder="Video URL"
-            style="font-size: 15px; width: 400px;"
-        >
+        <form onsubmit="fetchVideoInfo(event)" style="display: flex;">
+            <input
+                type="url" name="video_url" id="video_url" placeholder="Video URL"
+                style="font-size: 15px; width: 400px; border-radius: 6px;"
+                value="https://www.youtube.com/watch?v=dQw4w9WgXcQ" required
+            >
+            <button type="submit" class="green_button"></button>
+        </form>
+        <div id="result_box"></div>
     </div>
+    
 </body>
-
-<script>
-    const urlInput = document.getElementById('video-url-input');
-    const rawURL = urlInput.value; 
-
-    console.log(typeof rawURL); // "string" (Рядок)
-    console.log(rawURL)
-</script>
 </html>
