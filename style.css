@@ -11,6 +11,7 @@
 
 .green_button:hover {
     background-color: #2b9941;
+<<<<<<< HEAD
 }
 
 
@@ -48,4 +49,6 @@ canvas {
   padding-bottom: 2px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
+=======
+>>>>>>> 2f6afcb8c8bc49b71fc2fb6f5492c961728da93b
 }

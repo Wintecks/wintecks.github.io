@@ -54,12 +54,17 @@ async function fetchVideoInfo(event) {
                     <span id="start_time_text">0:00</span> - <span id="end_time_text">0:00</span>
                 </p>
             </div>
+<<<<<<< HEAD
             <div class="end_cont">
                 <select id="quality_select" name="video_format"></select>
             </div>
         `;  
         initTimeSlider(data.duration);
         populateQualitySelect(data.format)
+=======
+        `;
+        initTimeSlider(data.duration);
+>>>>>>> 2f6afcb8c8bc49b71fc2fb6f5492c961728da93b
 
     } catch (error) {
         console.error('Помилка запиту до бекенду:', error);
@@ -67,6 +72,7 @@ async function fetchVideoInfo(event) {
     }
 }
 
+<<<<<<< HEAD
 function populateQualitySelect(formatsDictionary) {
     
     selectElement = document.getElementById('quality_select');
@@ -107,6 +113,8 @@ function populateQualitySelect(formatsDictionary) {
     }
 }
 
+=======
+>>>>>>> 2f6afcb8c8bc49b71fc2fb6f5492c961728da93b
 // Функція форматування: (MM:SS)
 function formatTime(totalSeconds) {
     hours = Math.floor(totalSeconds / 3600);
