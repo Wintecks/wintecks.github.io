@@ -5,9 +5,10 @@
     <title>Wintekcs/utils</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <style>
     body {
-        background-color: rgb(31, 31, 31);
+        background-color: rgb(37, 37, 37);
     }
 
     .cont {
@@ -20,26 +21,17 @@
         border: 1.5px solid rgb(61, 68, 77);
         font-family: Verdana;
         padding: 4px;
-        padding-left: 7px;
         align-items: center;
-        justify-content: space-between;
-    }
-
-    .cont > * {
-        margin: 0;
-    }
-
-    .green_button {
-        height: 60px;
-        width: 60px;
+        justify-content: center;
     }
 
     .center_wrapper {
+        padding-top: 20px;
         height: 30vh;
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        margin: 0;
+        margin: 10;
     }
     
     .flexible_layout {
@@ -54,12 +46,12 @@
 </style>
 
 <body>
+    <div id="header"><script src="/header.js"></script></div>
     <dev class="center_wrapper">
         <dev class="flexible_layout">
-            <div class="cont">
+            <a class="cont" href="/utils/video_dlp">
                 <h3>Video Download</h3>
-                <button type="button" id="video_dlp" class="green_button"></button>
-            </div>
+            </a>
         </dev>
     </dev>
 </body>

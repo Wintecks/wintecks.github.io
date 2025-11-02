@@ -8,7 +8,7 @@
   font-display: swap; 
 }
 
-.green_button {
+.green_btn {
     display: inline-block;
     margin: 5px;
     border-radius: 6px;
@@ -19,7 +19,7 @@
     border: none;
 }
 
-.green_button:hover {
+.green_btn:hover {
     background-color: #2b9941;
 }
 
@@ -40,15 +40,24 @@ a {
     text-decoration: none;
 }
 
+.header_text:hover {
+    font-size: 55px;
+}
+
 #header {
+    /* Зберігаємо ваші стилі */
     background-color: rgb(31, 31, 31);
     height: 50px;
     font-family: 'BoldPixels', Arial;
     font-size: 50px;
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: flex-start;
+    position: fixed;
+    top: 0;         
+    left: 0;        
+    width: 100%;    
+    z-index: 1000;  
 }
 
 .header_cont {
@@ -58,4 +67,8 @@ a {
     transform: translate(-50%, -50%); 
     display: flex; 
     gap: 20px;
+}
+
+.logo {
+    padding-left: 10px;
 }

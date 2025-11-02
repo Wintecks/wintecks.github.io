@@ -63,7 +63,7 @@ async function fetchVideoInfo(event) {
 
     } catch (error) {
         console.error('Помилка запиту до бекенду:', error);
-        resultDiv.innerHTML = '<p class="error">Не вдалося з\'єднатися з сервером (перевірте, чи запущено Node.js).</p>';
+        resultDiv.innerHTML = '<p class="error" style="display: flex; justify-content: center;">Не вдалося з\'єднатися з сервером</p>';
     }
 }
 
