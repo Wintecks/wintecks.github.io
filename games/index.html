@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Wintekcs/games</title>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="./background.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<style>
+    body {
+        background-color: rgb(100, 100, 100);
+        margin: 0;
+    }
+    .green_button {
+        height: 60px;
+        width: 200px;
+    }
+    .cont {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 440px;
+        top: 250px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.404);
+        border-radius: 10px;
+        animation-name: slideDown;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    .center_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 10px;
+    }
+    
+    .content_box {
+        width: 440px;
+        color: white;
+        text-align: center;
+        border-radius: 16px;
+        background-color: rgb(44, 44, 51);
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-10%); 
+            opacity: 0.2;
+        }
+
+        to {
+            transform: translateY(0); 
+            opacity: 1;
+        }
+    }   
+</style>
+
+<body style="background-color:rgb(100,100,100)">
+
+    <div class="cont">
+        <div class="center_wrapper">
+            <div class="content_box">
+                <h1 style="font-family: Verdana; font-size: 50px;">
+                    Ігри
+                </h1>
+            </div>
+            <div class="content_box">
+                <h1 style="font-family: Verdana;">
+                    <button type="button" id="naval_battle" class="green_button">
+                        Морський Бій<sup title="Версія" style="padding-left: 2px;" >v0.0</sup>
+                    </button>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
