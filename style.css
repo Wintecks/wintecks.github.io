@@ -99,6 +99,9 @@ a {
 #menu_btn {
     display: none;
 }
+#mub_btn_header {
+    display: none;
+}
 
 @media (max-width: 768px) {
     
