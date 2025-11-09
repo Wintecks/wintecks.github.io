@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="canvas-wrapper">
+    <canvas id="myCanvas" width="400" height="200" style="background-color: aqua;"></canvas>
+    
+    <button id="overlayButton" class="overlay-button">
+        Натисни!
+    </button>
+</div>
+</body>
+<style>
+.canvas-wrapper {
+    position: relative; /* КЛЮЧ: Батьківський елемент для абсолютно позиціонованої кнопки */
+    display: inline-block; /* Щоб контейнер займав лише розмір канваса */
+}
+
+/* -------------------- Стилі Кнопки-Оверлею -------------------- */
+
+.overlay-button {
+    position: absolute; /* Позиціонуємо кнопку відносно .canvas-wrapper */
+    
+    /* Розміщення: Центруємо кнопку на канвасі */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    /* Початковий стан: ПРИХОВАНО */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s; /* Плавний перехід */
+    
+    z-index: 10; /* Кнопка над канвасом */
+    
+    /* Стилізація */
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стан: ПОКАЗАТИ при наведенні на батьківський контейнер */
+.canvas-wrapper:hover .overlay-button {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
+</html>

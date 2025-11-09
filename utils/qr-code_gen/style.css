@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.cont {
+    display: flex;
+    background: rgb(31, 31, 31);
+    padding: 20px;
+    border-radius: 7px;
+    gap: 30px;
+}
+
+.input_box {
+    display: flex;
+    align-items: center;
+}
+
+#input {
+    overflow: hidden;
+    resize: none;
+    border: none;
+    height: 98%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 30px;
+    border-radius: 7px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    outline: none;
+}
+
+.qr_box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#qr_box_2 {
+    height: 250px;
+    width: 250px;
+}
+
+.canvas_box {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-button {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 10;
+    padding: 10px 20px;
+    background-color: rgba(54, 54, 54, 0.432);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.canvas_box:hover .overlay-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn {
+    width: 250px;
+    height: 30px;
+    margin:unset;
+}
+
+#download_qr {
+    background-image: url('/img/download.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+@media (max-width: 950px) {
+.cont {
+    display: flex;
+    background: rgb(31, 31, 31);
+    padding: 20px;
+    border-radius: 7px;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#input {
+    height: 400px;
+    width: 250px;
+}
+
+body {
+    margin-top: 80px;
+}
+
+}

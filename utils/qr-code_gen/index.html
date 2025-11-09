@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wintekcs/utils/Qr-code</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="header"><script src="/header.js"></script></div>
+    <div id="mub_btn_header" class="none"><script src="/header.js"></script></div>
+    <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
+    <div class="cont">
+        <div class="input_box">
+            <textarea id="input" rows="5" cols="40"></textarea>
+        </div>
+        <div class="qr_box">
+            <div id="qr_box_2">
+                <img src="/img/qr.png" alt="qr-code" sizes="250px">
+            </div>
+            <button id="gen_btn" class="btn green_btn">Generate</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
