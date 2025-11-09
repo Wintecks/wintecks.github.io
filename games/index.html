@@ -13,22 +13,20 @@
 <style>
     body {
         background-color: rgb(100, 100, 100);
-        margin: 0;
+        display: flex;
+        justify-content: center;
     }
     
-    .game_btn {
+    .btn {
         height: 60px;
         width: 200px;
     }
 
     .cont {
+        margin: 200px;
         position: absolute;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
+        width: 80%;
         max-width: 440px;
-        top: 250px;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.404);
         border-radius: 10px;
@@ -36,7 +34,6 @@
         animation-duration: 1.5s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
-        opacity: 0;
     }
 
     .center_wrapper {
@@ -47,28 +44,30 @@
         margin: 0;
         gap: 10px;
     }
-    
-    .content_box {
-        width: 440px;
+
+    .item_box {
+        width: 100%; 
         color: white;
         text-align: center;
         border-radius: 16px;
         background-color: rgb(44, 44, 51);
     }
+
+
 </style>
 
 <body style="background-color:rgb(100,100,100)">
     <div id="header"><script src="/header.js"></script></div>
     <div class="cont">
         <div class="center_wrapper">
-            <div class="content_box">
+            <div class="item_box">
                 <h1 style="font-family: Verdana; font-size: 50px;">
                     Ігри
                 </h1>
             </div>
-            <div class="content_box">
+            <div class="item_box">
                 <h1 style="font-family: Verdana;">
-                    <button type="button" id="naval_battle" class="green_btn game_btn">
+                    <button id="naval_battle" class="btn green_btn game_btn">
                         Морський Бій<sup title="Версія" style="padding-left: 2px;" >v0.0</sup>
                     </button>
                 </h1>
